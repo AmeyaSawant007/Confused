@@ -1,0 +1,10 @@
+# Optional: enables the neural (MiniLM transformer) field matcher for Smart Import.
+# Without it, Smart Import still works via the keyword fallback matcher.
+#
+# Recommended install (CPU-only torch, much smaller than the default CUDA build):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+#   pip install -r requirements-ml.txt
+#
+# NOTE: first use downloads the ~80MB MiniLM model (cached afterwards in
+# ~/.cache/huggingface), so run once with internet before an offline demo.
+sentence-transformers>=2.7

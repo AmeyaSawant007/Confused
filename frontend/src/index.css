@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  --viz-halo: #fafaf9;
+}
+.dark {
+  color-scheme: dark;
+  --viz-halo: #1c1917;
+}
+
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.anim-fade-up {
+  animation: fadeUp 0.35s ease both;
+}
+.anim-fade-up-1 { animation: fadeUp 0.35s ease 0.05s both; }
+.anim-fade-up-2 { animation: fadeUp 0.35s ease 0.1s both; }
+.anim-fade-up-3 { animation: fadeUp 0.35s ease 0.15s both; }
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
+.anim-pulse-soft { animation: pulseSoft 1.2s ease-in-out infinite; }
+
+/* range sliders */
+input[type="range"] {
+  accent-color: #4f46e5;
+}
+
+/* thin scrollbars for viz panes */
+.viz-scroll::-webkit-scrollbar { height: 8px; width: 8px; }
+.viz-scroll::-webkit-scrollbar-thumb {
+  background: #c7c2b8; border-radius: 8px;
+}
+.dark .viz-scroll::-webkit-scrollbar-thumb { background: #44403c; }
+.viz-scroll::-webkit-scrollbar-track { background: transparent; }
+
+/* tabular numbers for scores */
+.tnum { font-variant-numeric: tabular-nums; }

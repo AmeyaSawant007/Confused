@@ -1,0 +1,24 @@
+{
+  "name": "confused-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5173",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0 --port 4173"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.0.0",
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "~5.6.0",
+    "vite": "^6.0.0"
+  }
+}
